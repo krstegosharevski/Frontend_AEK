@@ -1,0 +1,95 @@
+.extra-small-text{
+    font-size: 0.75rem;
+}
+.blue-thead th {
+    background-color: #425983 !important;
+    color: white !important; 
+}
+.form-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between rows */
+  }
+  .form-inline label {
+    margin-right: 10px; /* Space between label and input */
+  }
+  .form-control {
+    width: 200px; /* Adjust width as needed */
+  }
+
+  table thead .thead-blue tr{
+    background-color: #425983 !important;
+}
+
+.extra-extra-small-text{
+    font-size: 0.65rem;
+}
+
+.style-buttons{
+    background-color: rgba(152,143,122,255);
+    color: white;
+}
+
+.custom-text{
+  color: white;
+}
+
+.style-buttons-shadow {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /* Пример за сенка */
+}
+
+.extra-small-text {
+  font-size: 0.75rem;
+}
+
+.blue-thead th {
+  background-color: #d83656 !important;
+  color: white !important; 
+  border: 2px solid #ffffff; /* White border for header cells */
+}
+
+table {
+  border-collapse: collapse; /* Ensure borders are collapsed */
+  width: 100%;
+}
+
+table th, table td {
+  border: 1px solid #d83656; /* Border color for cells */
+  padding: 8px; /* Cell padding */
+}
+
+table thead {
+  background: linear-gradient(135deg, #40fe98, #ffffff); /* Gradient background for thead */
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f0f0f0; /* Light gray for even rows */
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White for odd rows */
+}
+
+table tbody tr:hover {
+  background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+table td, table th {
+  text-align: left; /* Align text to the left */
+}
+
+.table {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for table */
+}
+
+.custom-button{
+  border: 2px solid black;  color: black; background-color: #d83656 ;
+  width: 70px;
+  height: 35px;
+  padding-top: 4;
+}
+
+.custom-button:hover {
+  background-color: #556B2F; /* Darker shade on hover */
+  color: white; /* Change text color on hover */
+}

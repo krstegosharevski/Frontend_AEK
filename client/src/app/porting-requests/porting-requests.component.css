@@ -1,0 +1,71 @@
+.text-color {
+    color: white !important;
+  }
+  .navbar .dropdown-menu {
+    background-color: #fe4066;
+  }
+  .navbar .dropdown-item {
+    color: white !important;
+  }
+  .navbar .dropdown-item:hover {
+    background-color: #d83655;
+  }
+  
+  .custom-button {
+    border: 2px solid black;
+    color: #fff;
+    background-color: black
+  }
+  
+  .custom-button:hover {
+    background-color: #80f3b6;
+    /* Darker shade on hover */
+    color: white;
+    /* Change text color on hover */
+  }
+  .custom-button-reverse {
+    border: 2px solid black;
+    color: black;
+    background-color: #d83656
+  }
+  
+  .custom-button-reverse:hover {
+    background-color: #f36e89;
+    /* Darker shade on hover */
+    color: white;
+    /* Change text color on hover */
+  }
+
+
+  /* Стил за Select */
+
+  #statusSelect {
+    background-color: #f8f9fa; /* Светло сива позадина */
+    border: 1px solid #ced4da; /* Светло сива граница */
+    border-radius: 0.25rem; /* Закривени агли */
+    color: #495057; /* Темна боја на текстот */
+  }
+  
+  #statusSelect:focus {
+    border-color: #80bdff; /* Синја граница при фокусирање */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Син патент при фокусирање */
+  }
+
+  ::ng-deep .pagination {
+    background-color: #d83656;
+  }
+  
+  ::ng-deep .pagination li a {
+    color: #d83655;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+  }
+  
+  ::ng-deep .pagination li a:hover,
+  ::ng-deep .pagination li a:focus,
+  ::ng-deep .pagination li.active a {
+    color: #f8f9fa;
+    background-color: #f36e89;
+    border-color: #f36e89;
+  }
+  

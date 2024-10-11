@@ -1,0 +1,81 @@
+<div class="mt-4">
+    <div class="container pb-2 mb-4 pt-2" style="background-color:#f6f3f4">
+        <div class="row">
+            <div>
+                <h1 class="text-center fw-light">{{'reports.reports' | translate}}</h1>
+            </div>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-auto text-right">
+                <span class="extra-small-text fw-light-bold">
+                    {{'reports.export'|translate}}: Excel <img style="width: 15px; height: 15px;"
+                        src="http://88.85.105.139/AEC-NumberPortability/images/xls.png"> / PDF <img
+                        src="http://88.85.105.139/AEC-NumberPortability/images/pdf.png">
+                </span>
+            </div>
+        </div>
+        <div class="container mt-2"style="background-color: white;">
+            <div class="container " >
+                <div class="row justify-content-center">
+                    <div class="col-auto mt-2 ">
+                        <p class="fw-light"><b>{{'reports.operatosDonators'|translate}}</b></p>
+                        <select class="styled-select">
+                            <option class="small" value="1">MTel</option>
+                            <option class="small" value="2">Актон</option>
+                            <option class="small" value="3">Албафоне</option>
+                            <option class="small" value="4">Алтра САТ</option>
+                            <option class="small" value="5">Близу</option>
+                            <option class="small" value="6">ВИП Оператор</option>
+                            <option class="small" value="7">ДЕТЕЛ М</option>
+                            <option class="small" value="8">ИНТЕРСПАЦЕ</option>
+                            <option class="small" value="9">Каблекал</option>
+                            <option class="small" value="10">Космофон</option>
+                        </select>
+                    </div>
+
+                    <div class="col-auto mt-2">
+                        <p class="fw-light"><b>{{'reports.operatosReceivers'|translate}}</b></p>
+                        <select class="styled-select">
+                            <option class="small" value="1">MTel</option>
+                            <option class="small" value="2">Актон</option>
+                            <option class="small" value="3">Албафоне</option>
+                            <option class="small" value="4">Алтра САТ</option>
+                            <option class="small" value="5">Близу</option>
+                            <option class="small" value="6">ВИП Оператор</option>
+                            <option class="small" value="7">ДЕТЕЛ М</option>
+                            <option class="small" value="8">ИНТЕРСПАЦЕ</option>
+                            <option class="small" value="9">Каблекал</option>
+                            <option class="small" value="10">Космофон</option>
+                        </select>
+                    </div>
+
+                    <div class="col-auto mt-2 ms-4">
+                        <select class="styled-select">
+                            <option select="selected">--Select report type--</option>
+                            <option>Ported numbers</option>
+                            <option>Network operators</option>
+                            <option>Late response from operator</option>
+                        </select>
+                        <div class="form-inline pt-3">
+                            <label for="datepicker" class="fw-light"><b>{{'from'|translate}}:</b></label>
+                            <input id="datepicker" type="text" placeholder="Pick a start date" class="form-control ms-1"
+                                bsDatepicker>
+                            <img class="ps-2"
+                                src="http://88.85.105.139/AEC-NumberPortability/struts/dojo/src/widget/templates/images/dateIcon.gif">
+                        </div>
+                        <div class="form-inline pt-1">
+                            <label for="datepicker" class="fw-light"><b>{{'to'|translate}}:</b></label>
+                            <input id="datepicker" type="text" placeholder="Pick an end date" class="form-control ms-4"
+                                bsDatepicker>
+                            <img class="ps-2"
+                                src="http://88.85.105.139/AEC-NumberPortability/struts/dojo/src/widget/templates/images/dateIcon.gif">
+                        </div>
+                        <div class="d-flex justify-content-end my-2">
+                             <input class="btn btn-sm custom-button fw-light-bold" type="button" value="Filter"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

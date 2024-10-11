@@ -1,0 +1,32 @@
+<div class="bg-secondary text-center mt-4 pt-2">
+    <h4>Portfolio</h4>
+    <hr class="w-25 mx-auto">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let user of users" class="col mb-3">
+                <div class="card" style="width: 18rem;">
+                    <header class="card-header">{{user.username}}</header>
+                    <div class="card-body">
+                      <h5 class="card-title">{{user.id}} / <small class="text-muted">{{user.gender}}</small></h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <app-actions (addMovie)="onAddMovie($event)"></app-actions>
+<div class="container mt-4" *ngIf="curr_state===false">
+    <button class="btn btn-danger" (click)="sendMovies()">Send movies</button>
+</div> -->
+<div class="container">
+    <div class="row">
+      <div *ngFor="let movie of movies" class="col">
+        <ul class="list-unstyled">
+          <li>{{movie.title}}</li>
+          <li>{{movie.rating}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,62 @@
+<div class="text-center mt-4">
+    <img src="https://randomuser.me/portraits/men/10.jpg">
+    <h2>Krste Gosharevski</h2>
+    <hr class="w-25 mx-auto">
+    <p>New York, Manhattan CCI</p>
+</div>
+
+<!-- <div class="bg-secondary text-center mt-4 pt-2">
+  <h4>Portfolio</h4>
+  <hr class="w-25 mx-auto">
+  <div class="container">
+      <div class="row">
+          <div class="col mb-3">
+              <div class="card" style="width: 18rem;">
+                  <header class="card-header">FREE</header>
+                  <div class="card-body">
+                    <h5 class="card-title">$0,00 / <small class="text-muted">mo</small></h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col mb-3">
+              <div class="card" style="width: 18rem;">
+                  <header class="card-header">PRO</header>
+                  <div class="card-body">
+                    <h5 class="card-title">$15,99 / <small class="text-muted">mo</small></h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col mb-3">
+              <div class="card" style="width: 18rem;">
+                  <header class="card-header">ENTERPRICE</header>
+                  <div class="card-body">
+                    <h5 class="card-title">$29,99 / <small class="text-muted">mo</small></h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+<app-portfolio [users] = "users" (moviesEvent)="handleMoviesEvent($event)"></app-portfolio>
+
+<div class="container" *ngIf="movies !== null">
+  <div class="row">
+    <div *ngFor="let m of movies" class="col">
+      <ul class="list-unstyled">
+        <li>{{m.title}}</li>
+        <li>{{m.rating}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+

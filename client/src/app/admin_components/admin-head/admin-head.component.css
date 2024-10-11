@@ -1,0 +1,8 @@
+::ng-deep .nav-tabs .nav-item.show .nav-link, 
+::ng-deep .nav-tabs .nav-link.active {
+  color: black !important; /* Боја на активниот таб */
+}
+
+::ng-deep .nav-tabs .nav-link {
+  color: #fe4066 !important; /* Промени ја бојата како што сакаш */
+}

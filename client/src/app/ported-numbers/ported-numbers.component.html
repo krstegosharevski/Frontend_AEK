@@ -1,0 +1,173 @@
+<div class="container">
+    <div class="row">
+        <div class="col my-4">
+            <div class="info-panel p-4">
+                <h3 class="fw-light text-center py-2">{{'porteds.checkStatus'|translate}}:</h3>
+
+                <div class="container mt-3">
+
+                    <form [formGroup]="portedForm" (ngSubmit)="onSubmit()">
+                        <div class="row mb-3">
+                          <div class="col">
+                            <label for="ID_Nsn">ID_Nsn:</label>
+                            <input type="number" id="ID_Nsn" formControlName="ID_Nsn" class="form-control" required>
+                            <div *ngIf="portedForm.get('ID_Nsn')?.hasError('invalidIdNsn')">
+                              <small class="text-danger">Invalid ID_Nsn format.</small>
+                            </div>
+                            <div *ngIf="portedForm.get('ID_Nsn')?.hasError('required') && portedForm.get('ID_Nsn')?.touched">
+                              <small class="text-danger">ID_Nsn {{'porteds.required'|translate}}</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <label for="donor">{{'porteds.donor' | translate}}:</label>
+                            <input type="number" id="donor" formControlName="donor" class="form-control" required>
+                            <div *ngIf="portedForm.get('donor')?.hasError('required') && portedForm.get('donor')?.touched">
+                              <small class="text-danger">{{'porteds.donor'|translate}} {{'porteds.required'|translate}}</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <label for="recipient">{{'porteds.recipient' | translate}}:</label>
+                            <input type="number" id="recipient" formControlName="recipient" class="form-control" required>
+                            <div *ngIf="portedForm.get('recipient')?.hasError('required') && portedForm.get('recipient')?.touched">
+                              <small class="text-danger">{{'porteds.recipient'|translate}} {{'porteds.required'|translate}}</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <label for="routingCode">{{'porteds.routingCode' | translate}}:</label>
+                            <input type="text" id="routingCode" formControlName="routingCode" class="form-control" required>
+                            <div *ngIf="portedForm.get('routingCode')?.hasError('minlength') || portedForm.get('routingCode')?.hasError('maxlength')">
+                              <small class="text-danger">Routing code must be exactly 2 characters long.</small>
+                            </div>
+                            <div *ngIf="portedForm.get('routingCode')?.hasError('required') && portedForm.get('routingCode')?.touched">
+                              <small class="text-danger">{{'porteds.routingCode' | translate}} {{'porteds.required'|translate}}</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <label for="date">{{'porteds.date' | translate}}:</label>
+                            <input type="text" id="date" formControlName="date" class="form-control" required>
+                            <div *ngIf="portedForm.get('date')?.hasError('required') && portedForm.get('date')?.touched">
+                              <small class="text-danger">{{'porteds.date' | translate}} {{'porteds.required'|translate}}</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <label for="name">{{'porteds.name' | translate}}:</label>
+                            <input type="text" id="name" formControlName="name" class="form-control" required>
+                            <div *ngIf="portedForm.get('name')?.hasError('required') && portedForm.get('name')?.touched">
+                              <small class="text-danger">{{'porteds.name' | translate}} {{'porteds.required'|translate}}</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <label for="edb">EDB:</label>
+                            <input type="text" id="edb" formControlName="edb" class="form-control" required>
+                            <div *ngIf="portedForm.get('edb')?.hasError('invalidEdb')">
+                              <small class="text-danger">Invalid EDB format.</small>
+                            </div>
+                            <div *ngIf="portedForm.get('edb')?.hasError('required') && portedForm.get('edb')?.touched">
+                              <small class="text-danger">EDB {{'porteds.required'|translate}}</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col">
+                            <label for="comment">{{'porteds.comment' | translate}}:</label>
+                            <input type="text" id="comment" formControlName="comment" class="form-control" required>
+                            <div *ngIf="portedForm.get('comment')?.hasError('required') && portedForm.get('comment')?.touched">
+                              <small class="text-danger">{{'porteds.comment' | translate}} {{'porteds.required'|translate}}</small>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn custom-button-reverse m-3">{{'porteds.check' | translate}}</button>
+                      </form>
+                      
+                      <div class="my-4 p-3 info-panel" [ngClass]="{'valid-status': status === 'Valid', 'invalid-status': status === 'Invalid'}">
+                        <p>{{'porteds.status' | translate}}: {{ status }}</p>
+                      </div>
+
+
+                      <!-- <form (ngSubmit)="onSubmit()">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="ID_Nsn">ID_Nsn:</label>
+                                <input type="number" id="ID_Nsn" [(ngModel)]="ID_Nsn" name="ID_Nsn" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="donor">{{'porteds.donor'|translate}}:</label>
+                                <input type="number" id="donor" [(ngModel)]="donor" name="donor" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="recipient">{{'porteds.recipient'|translate}}:</label>
+                                <input type="number" id="recipient" [(ngModel)]="recipient" name="recipient" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="routingCode">{{'porteds.routingCode'|translate}}:</label>
+                                <input type="text" id="routingCode" [(ngModel)]="routingCode" name="routingCode" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="date">{{'porteds.date'|translate}}:</label>
+                                <input type="text" id="date" [(ngModel)]="date" name="date" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col"> 
+                                <label for="name">{{'porteds.name'|translate}}:</label>
+                                <input type="text" id="name" [(ngModel)]="name" name="name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="edb">EDB:</label>
+                                <input type="text" id="edb" [(ngModel)]="edb" name="edb" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label for="comment">{{'porteds.comment'|translate}}:</label>
+                                <input type="text" id="comment" [(ngModel)]="comment" name="comment" class="form-control" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn custom-button-reverse m-3">{{'porteds.check'|translate}}</button>
+                    </form>
+                    
+                    <div class="my-4 p-3 info-panel" [ngClass]="{'valid-status': status === 'Valid', 'invalid-status': status === 'Invalid'}">
+                        <p>{{'porteds.status'|translate}}: {{ status }}</p>
+                    </div> -->
+                      
+                      
+
+                </div>
+            </div>
+        </div>
+        <div class="col-8 mt-4">
+            <div class="container">
+                <div class="row info-panel">
+                    <h4 class="fw-light text-center pt-3">{{'porteds.number'|translate}}</h4>
+                    <app-porting-requests class="extra-small-text"></app-porting-requests>
+                </div>
+                
+                <br><br>
+
+            </div>
+        </div>
+    </div>
+
+</div>

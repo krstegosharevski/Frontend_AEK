@@ -1,0 +1,316 @@
+<div class="pb-4">
+  <div class="container pt-2" style="background-color: #f6f3f4">
+    <div class="row">
+      <div class="text-center">
+        <h1 class="fw-light">{{'calendars.calendars'|translate}}</h1>
+      </div>
+    </div>
+
+
+    <div class="container mt-2">
+      <div class="row justify-content-center align-items-center">
+        
+        <div class="col-auto mb-4" *ngIf="!showForm">
+          <button class="btn  btn-lg custom-button-reverse" (click)="showForm = !showForm">
+            {{'calendars.chooseDate'|translate}}
+          </button>
+        </div>
+
+        <div *ngIf="showForm" class="col-auto my-4">
+          <div class="row">
+            <div class="col-md-12">
+              <form action="" method="post">
+                <h1> {{'calendars.chooseDate'|translate}} </h1>
+                
+                <fieldset>
+                  
+                  <legend><span class="number">1</span> {{'calendars.form.selectDate'|translate}}  <img for="datepicker" class="ms-1"
+                    src="http://88.85.105.139/AEC-NumberPortability/struts/dojo/src/widget/templates/images/dateIcon.gif"></legend>
+                
+                  <label for="name">{{'calendars.form.date'|translate}}:</label>
+                  <input id="datepicker" type="text" bsDatepicker>
+                  
+
+                  <legend><span class="number">2</span> {{'calendars.form.searchTitle'|translate}} </legend>
+                
+                  <label for="title">{{'calendars.form.title'|translate}}:</label>
+                  <input type="text" id="title" name="title">
+
+
+                  <legend><span class="number">3</span> {{'calendars.form.selectType'|translate}} </legend>
+                
+                  <label for="title">{{'calendars.form.type'|translate}}:</label>
+                  <select class="">
+                    <option>{{'calendars.form.wDay'|translate}}</option>
+                    <option>{{'calendars.form.nwDay'|translate}}</option>
+                  </select>
+                  
+                  
+                  <legend><span class="number">4</span> {{'calendars.form.addDescription'|translate}}</legend>
+               
+                  <label for="password">{{'calendars.form.description'|translate}}:</label>
+                  <textarea rows="3" ></textarea>
+                  
+                </fieldset>
+               
+                <button (click)="showForm = false" type="submit">{{'calendars.form.markDate'|translate}}</button>
+                
+               </form>
+                </div>
+              </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col pt-2 mx-2" style="  background-color: white">
+            <div>
+              <div class="form-inline">
+
+                <label class="extra-small-text" for="datepicker">{{'from'|translate}}:</label>
+                <input id="datepicker" type="text" class="form-control" bsDatepicker
+                  style="width: 120px; height: 30px;">
+                <img for="datepicker" class="ms-1"
+                  src="http://88.85.105.139/AEC-NumberPortability/struts/dojo/src/widget/templates/images/dateIcon.gif">
+
+                <label class="extra-small-text" for="datepicker">{{'to'|translate}}:</label>
+                <input id="datepicker" type="text" class="form-control" bsDatepicker
+                  style="width: 120px; height: 30px;">
+                <img for="datepicker" class="ms-1"
+                  src="http://88.85.105.139/AEC-NumberPortability/struts/dojo/src/widget/templates/images/dateIcon.gif">
+
+                <label class="extra-small-text ps-3" for="datepicker">{{'calendars.sortedBy'|translate}}:</label>
+                <select class="extra-small-text">
+                  <option>Title</option>
+                  <option>Type</option>
+                  <option>Date</option>
+                </select>
+
+                <input class="btn btn-sm ms-3 custom-button-reverse fw-light-bold" type="button" value="Filter">
+              </div>
+
+              <div>
+                <table class="table table-striped extra-extra-small-text">
+                  <thead class="blue-thead">
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">{{'calendars.form.date'|translate}}</th>
+                      <th scope="col">{{'calendars.form.title'|translate}}</th>
+                      <th scope="col">{{'calendars.form.type'|translate}}</th>
+                      <th scope="col">{{'calendars.form.description'|translate}}</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">08-09-2008</th>
+                      <td>Државен празник 8ми септември</td>
+                      <td>Not working day</td>
+                      <td></td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">30-09-2008</th>
+                      <td>Рамазан Бајрам</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">08-12-2008</th>
+                      <td>Св. Климент Охридски</td>
+                      <td>Non-working day</td>
+                      <td></td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="ids"></td>
+                      <th scope="row">23-10-2008</th>
+                      <td>Ден на македонска револуционерна борба</td>
+                      <td>Non-working day</td>
+                      <td>Државен празник</td>
+                      <td class="d-flex justify-content-end">
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                        <a href="#"><img src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif" alt=""></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="container pb-2" style="background-color: #d83656;">
+                  <div class="row">
+                    <div class="col-9">
+                      <input class="btn btn-sm ms-3 custom-button-reverse mt-2" type="button" value="Remove">
+                    </div>
+                    <div class="col d-flex justify-content-end align-items-center">
+                      <span class="extra-small-text">
+                        {{'calendars.total'|translate}}: <b>184</b> {{'calendars.days'|translate}}
+                      </span>
+                      <span class="extra-small-text ps-3">
+                        {{'calendars.page'|translate}}: <b>1/12</b> <a href="#" style="text-decoration: none;"> {{'calendars.next'|translate}}</a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="row">
+        <div class="col d-flex justify-content-end align-items-center">
+          <span class="extra-small-text">
+            <img src="http://88.85.105.139/AEC-NumberPortability/images/help-icon.jpg"> Help
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>

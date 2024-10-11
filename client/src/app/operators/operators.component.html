@@ -1,0 +1,201 @@
+<div class="pb-4">
+    <div class="container pt-2" style="background-color: #f6f3f4">
+        <div class="row">
+            <div class="text-center">
+                <h1 class="fw-light">{{'operators.operators'|translate}}</h1>
+            </div>
+        </div>
+
+
+        <div class="container mt-2">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-auto mb-4" *ngIf="!showForm">
+                    <button class="btn  btn-lg custom-button-reverse" (click)="showForm = !showForm">
+                        {{'operators.addOperators'|translate}}
+                    </button>
+                </div>
+
+                <div *ngIf="showForm" class="col-auto my-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form action="" method="post">
+                                <h1> {{'operators.addOperators'|translate}} </h1>
+
+                                <fieldset>
+
+                                    <legend><span class="number">1</span> {{'operators.form.addOperatorsName'|translate}} </legend>
+
+                                    <label for="username">{{'operators.form.name'|translate}}:</label>
+                                    <input id="username" type="text">
+
+
+                                    <legend><span class="number">2</span> {{'operators.form.addOperatorsCode'|translate}} </legend>
+
+                                    <label for="password">{{'operators.form.code'|translate}}:</label>
+                                    <input type="password" id="password" name="password">
+
+
+                                    <legend><span class="number">3</span> {{'operators.form.addOperatorsX509'|translate}} </legend>
+
+                                    <label for="c_name">{{'operators.form.cName'|translate}}:</label>
+                                    <input type="text" id="c_name" name="c_name">
+
+
+
+                                    <legend><span class="number">4</span> {{'operators.form.addOperatorsKeystore'|translate}} </legend>
+
+                                    <label for="keystore">{{'operators.form.keystore'|translate}}:</label>
+                                    <input type="text" id="keystore" name="keystore">
+
+                                    <legend><span class="number">5</span> {{'operators.form.addOperatorsEndpoint'|translate}} </legend>
+
+                                    <label for="endpoint">{{'operators.form.endpoint'|translate}}:</label>
+                                    <input type="text" id="endpoint" name="endpoint">
+
+
+                                    <legend><span class="number">6</span> {{'operators.form.addOperatorsFixed'|translate}} </legend>
+
+                                    <label for="b_fix">{{'operators.form.fixed'|translate}}:</label>
+                                    <input type="text" id="b_fix" name="b_fix">
+
+
+                                    <legend><span class="number">7</span> {{'operators.form.addOperatorsMobile'|translate}} </legend>
+
+                                    <label for="b_num">{{'operators.form.mobile'|translate}}:</label>
+                                    <input type="text" id="b_num" name="b_num">
+
+                                    <label for="password">{{'operators.form.description'|translate}}:</label>
+                                    <textarea rows="3"></textarea>
+
+                                </fieldset>
+
+                                <button (click)="showForm = false" type="submit">{{'operators.addOperators'|translate}} </button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col pt-2 mx-2" style="  background-color: white">
+                        <div>
+                            <!-- <div class="form-inline">
+
+                                <label class="extra-small-text" for="datepicker">From:</label>
+                                <input id="datepicker" type="text" class="form-control" bsDatepicker
+                                    style="width: 120px; height: 30px;">
+                                <img for="datepicker" class="ms-1"
+                                    src="http://88.85.105.139/AEC-NumberPortability/struts/dojo/src/widget/templates/images/dateIcon.gif">
+
+                                <label class="extra-small-text" for="datepicker">To:</label>
+                                <input id="datepicker" type="text" class="form-control" bsDatepicker
+                                    style="width: 120px; height: 30px;">
+                                <img for="datepicker" class="ms-1"
+                                    src="http://88.85.105.139/AEC-NumberPortability/struts/dojo/src/widget/templates/images/dateIcon.gif">
+
+                                <label class="extra-small-text ps-3" for="datepicker">Sort by:</label>
+                                <select class="extra-small-text">
+                                    <option>Title</option>
+                                    <option>Type</option>
+                                    <option>Date</option>
+                                </select>
+
+                                <input class="btn btn-sm ms-3 custom-button fw-light-bold" type="button" value="Filter">
+                            </div> -->
+
+                            <div>
+                                <table class="table table-striped extra-extra-small-text">
+                                    <thead class="blue-thead">
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">{{'operators.operatorName'|translate}} </th>
+                                            <th scope="col">{{'operators.operatorCode'|translate}} </th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let operator of operators">
+                                            <td scope="col"></td>
+                                            <td>{{operator.name}}</td>
+                                            <td>{{operator.code}}</td>
+                                            <td scope="col"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="container p-3" style="background-color: #d83656;">
+                                    <div class="col-xs-12 col-12">
+                                        <pagination
+                                          [totalItems]="totalItems"
+                                          [(ngModel)]="currentPage"
+                                          [itemsPerPage]="itemsPerPage"
+                                          (pageChanged)="pageChanged($event)"
+                                          [maxSize]="5"
+                                          [boundaryLinks]="true"
+                                          [rotate]="false"
+                                          [previousText]="'<'"
+                                          [nextText]="'>'"
+                                        ></pagination>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end align-items-center">
+                    <span class="extra-small-text">
+                        <img src="http://88.85.105.139/AEC-NumberPortability/images/help-icon.jpg"> Help
+                    </span>
+                </div>
+            </div>
+
+            <div class="row my-2">
+                <div class="col-2">
+                    <button (click)="showOperator = true" class="custom-button-reverse">{{'operator'|translate}}: ()</button>
+                </div>
+            </div>
+
+
+            <div *ngIf="showOperator" class="row mt-4" style="background-color: white">
+                <hr>
+                <table class="table">
+                    <tr>
+                        <td class="col-5 ps-2">{{'operators.form.description'|translate}}</td>
+                        <td class="col ps-1">{{'operators.assigned'|translate}}</td>
+                        <td class="col ps-2 pt-4"><input type="text" style="height: 15px;"></td>
+                        <td class="col ps-2">{{'to'|translate}}</td>
+                        <td class="col ps-2 pt-4"><input type="text" style="height: 15px;"></td>
+                        <td class="col ps-2"> <input class="btn btn-sm me-2 custom-button-reverse" type="button"
+                                value="Dessign series"></td>
+                    </tr>
+                    <tr>
+                        <td class="col-6"></td>
+                        <td colspan="4" class="text-center" style="background-color: white; color: #d83656;">{{'operators.noSeries'|translate}}</td>
+                    </tr>
+                </table>
+
+                <div class="col d-flex justify-content-end align-items-center">
+                    <span class="extra-small-text">
+                        {{'operators.totalSeries'|translate}}: 0
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="row mt-4">
+                <hr>
+                <div class="col text-center">
+                    <h3 class="fw-light">{{'operators.certificates'|translate}}</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,189 @@
+<div class="container-fluid " style="background-color: #f6f3f4;">
+  <div class="row ">
+    <div class="col-10"></div>
+    <div class="col-2">  <select class="form-select m-2 fw-light" (change)="ChangeLang($event)" name="" id="">
+        <option [selected]="lang==='en'" class="fw-light" value="en">English</option>
+        <option [selected]="lang==='mk'" class="fw-light" value="mk">Macedonian</option>
+        <option [selected]="lang==='tr'" class="fw-light" value="tr">Turkish</option>
+      </select></div>
+  </div>
+
+</div>
+<div style="background-color: white;">
+
+  <nav class="navbar navbar-expand navbar-light bg-light sticky-top" style="background-color: #fe4066 !important;">
+    <div class="container-fluid">
+      <a class="navbar-brand ml-5 ms-4 ps-4 pb-3" href="index.html"><img class="partymonster"
+          src="https://aek.mk/wp-content/uploads/2019/02/logo_aek-1.png" style="width: 190px;"></a>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto pt-4">
+          <li class="nav-item active ps-2">
+            <a class="nav-link text-color" routerLink="/home" routerLinkActive="active">{{'home'|translate}}</a>
+          </li>
+          <li class="nav-item active ps-2">
+            <a class="nav-link text-color" routerLink="/reports" routerLinkActive="active">{{'report'|translate}}</a>
+          </li>
+          <li class="nav-item ps-2">
+            <a class="nav-link text-color" routerLink="/actions" routerLinkActive="active">{{'action'| translate}}</a>
+          </li>
+          <li class="nav-item ps-2">
+            <a class="nav-link text-color" routerLink="/calendars" routerLinkActive="active">{{'calendar'|
+              translate}}</a>
+          </li>
+          <li class="nav-item ps-2">
+            <a class="nav-link text-color" routerLink="/users" routerLinkActive="active">{{'user'| translate}}</a>
+          </li>
+          <li class="nav-item ps-2">
+            <a class="nav-link text-color" routerLink="/operators" routerLinkActive="active">{{'operator'|
+              translate}}</a>
+          </li>
+          <li class="nav-item ps-2">
+            <a class="nav-link text-color" routerLink="/portednumbers" routerLinkActive="active">{{'ported'|
+              translate}}</a>
+          </li>
+          <li class="nav-item ps-2">
+            <a class="nav-link text-color" routerLink="#" routerLinkActive="active">{{'admin'| translate}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown ms-auto me-4">
+
+        <!-- <div class="btn-group" dropdown>
+          <a class="nav-link dropdown-toggle text-color" dropdownToggle id="userDropdown" role="button"
+            aria-expanded="false" aria-controls="dropdown-basic">
+            <img src="../../assets/picture.jpg" alt="User Icon" style="width: 30px;">
+          </a>
+          <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu dropdown-menu-start" role="menu" aria-labelledby="button-basic">
+            <li role="menuitem"><a class="dropdown-item" href="#">Log out</a></li>
+          </ul>
+        </div> -->
+        <div class="dropdown ms-auto me-4">
+          <div class="btn-group" dropdown>
+            <a class="nav-link dropdown-toggle text-color" dropdownToggle id="userDropdown" role="button"
+              aria-expanded="false" aria-controls="dropdown-basic">
+              <img src="../../assets/user2.jpeg" alt="User Icon" style="width: 30px;">
+            </a>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu custom-dropdown-menu" role="menu"
+              aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item fw-light" href="#">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </nav>
+
+</div>
+
+
+<!-- Old style!!!
+ <div class="container bg-white">
+    
+    
+  </div>
+  <div class="container mt-2">
+     <nav class="navbar navbar-expand-lg  custom-color-nav " > style the nav with defoult: bg-body-tertiary -->
+<!-- <div class="container">
+        <div class=" mx-auto"  id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto  ">
+            <li class="px-1">
+              <table class="custom-color">
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_report_white.jpg"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/reports" routerLinkActive="active">Reports</a></td>
+                  <td><span style="width: 5px;"></span></td>
+                </tr>
+              </table>
+            </li>
+            <li class="px-1">
+              <table class="custom-color" >
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_r_errors_white.jpg"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/actions" routerLinkActive="active">Routing errors</a></td>
+                </tr>
+              </table>
+            </li>
+            <li class="px-1">
+              <table class="custom-color">
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_callendar_white.jpg"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/calendars" routerLinkActive="active">Calendars</a></td>
+                </tr>
+              </table>
+            </li>
+            <li class="px-1">
+              <table class="custom-color">
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_users.jpg"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/users" routerLinkActive="active">Users</a></td>
+                </tr>
+              </table>
+            </li>
+            <li class="px-1">
+              <table class="custom-color">
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_operators_white.jpg"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/operators" routerLinkActive="active">Operator</a></td>
+                </tr>
+              </table>
+            </li>
+            <li class="px-1">
+              <table class="custom-color">
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_history_report.jpg"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/actions" routerLinkActive="active">Ported number history</a></td>
+                </tr>
+              </table>
+            </li>
+            <li class="px-1">
+              <table class="custom-color">
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_admin.png"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/adminpanel" routerLinkActive="active">Admin</a></td>
+                </tr>
+              </table>
+            </li> 
+            <li class="px-1">
+              <table class="custom-color">
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_r_errors.jpg"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/actions" routerLinkActive="active">Downtime</a></td>
+                </tr>
+              </table>
+            </li> 
+            <li class="px-1">
+              <table class="custom-color">
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_series.png"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/actions" routerLinkActive="active">Series</a></td>
+                </tr>
+              </table>
+            </li>
+            <li class="px-1">
+              <table class="custom-color">
+                <tr>
+                  <td> </td>
+                  <td><img src="http://88.85.105.139/AEC-NumberPortability/images/tab_image_help.jpg"></td>
+                  <td><a class="dropdown-item custom-text" routerLink="/actions" routerLinkActive="active">Help</a></td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+</div> -->

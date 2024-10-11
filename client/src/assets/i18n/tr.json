@@ -1,0 +1,178 @@
+{
+    "home": "Ana Sayfa",
+    "report": "Raporlar",
+    "action": "Eylemler",
+    "calendar": "Takvimler",
+    "user": "Kullanıcılar",
+    "operator": "Operatör",
+    "ported": "Taşınan Numara Geçmişi",
+    "admin": "Yönetici",
+    "about us": "Hakkımızda",
+    "downtime": "Kullanım Dışı Süre",
+    "series": "Seriler",
+    "help": "Yardım",
+    "contact": "İletişim",
+    "footerText": "© 2024 Telif Hakkı: Elektronik İletişim Kurumu. Tüm hakları saklıdır.",
+    "from": "Başlangıç",
+    "to": "Bitiş",
+    "filter": "Filtrele",
+    "search": "Ara",
+
+    "homes": {
+        "mission": "Misyonumuz, kullanıcıların, ekonominin ve iletişim sektörünün çıkarlarını korumak için elektronik iletişim pazarında etkili ve sürdürülebilir rekabet koşulları oluşturmak; bu amaçla düzenleyici araçları etkili, şeffaf, uygun ve proaktif bir şekilde uygulamaktır.",
+        "header1": "Elektronik",
+        "header2": "İletişim Kurumu",
+        "texts": {
+            "operators": "Ağımızda bulunan tüm operatörler burada gösterilmektedir. Her operatörün kendine özgü bir kodu ve adı vardır, bu da onları kolayca tanımlayıp yönetmenizi sağlar.",
+            "actions": "Burada NS (Ulusal Önemli Numara) ve NDC (Ulusal Yönlendirme Kodu) kullanarak numaraları arayabilirsiniz. Arama formuna kriterlerinizi girin ve sonuçları almak için Ara'ya tıklayın.",
+            "ported": "Taşınan numaraların geçmişi sayfası, ağımıza veya ağımızdan taşınan numaraların geçmişini görmenizi sağlar. Tüm taşınan numaraların detaylarını görüntüleyin.",
+            "calendar": "Burada mevcut yıl içindeki tüm çalışma dışı günlerin takvimini görüntüleyebilirsiniz. Bu günler tatiller, ulusal ve yerel bayramlar ve diğer önemli tarihler içerir.",
+            "users": "Kullanıcılar sayfasında sistemdeki tüm kullanıcıları görüntüleyebilir ve yönetebilirsiniz. Bu sayfa, her kullanıcının adı, rolü ve açıklaması gibi detaylarını görmenizi sağlar."
+        },
+        "buttons": {
+            "operators": "Operatörleri Gör",
+            "actions": "Numaraları Ara",
+            "ported": "Kontrol Et",
+            "calendar": "Tarihlere Bak",
+            "users": "Kullanıcıları Gör"
+        }
+    },
+
+    "reports": {
+        "reports": "Raporlar",
+        "operatosDonators": "Tüm operatörler: Bağışçılar",
+        "operatosReceivers": "Tüm operatörler: Alıcılar",
+        "export": "Bunu dışa aktar"
+    },
+
+    "actions": {
+        "information": "Bilgi Paneli",
+        "searchNumber": "Numara Ara",
+        "headers": {
+            "newService": "Yeni Hizmetler veya Ürünler Başlatma",
+            "partnershipsCollaborations": "Ortaklıklar ve İşbirlikleri",
+            "awards": "Ödüller ve Tanınmalar",
+            "responsibility": "Sosyal Sorumluluk"
+        },
+        "content": {
+            "newService": "Elektronik İletişim Kurumu, mobil ağ kalitesini izlemek için yeni bir uygulama başlatıyor.",
+            "partnershipsCollaborations": "Elektronik İletişim Kurumu, ülkenin önde gelen telekomünikasyon şirketleriyle işbirliği protokolü imzalıyor.",
+            "awards": "“Elektronik İletişim Kurumu, dijital dönüşüm çabaları için uluslararası tanınma aldı.”",
+            "responsibility": "“Elektronik İletişim Kurumu, gençler arasında internet güvenliği konusunda farkındalık artırma kampanyası başlattı.”"
+        }
+    },
+
+    "calendars": {
+        "calendars": "Takvim",
+        "chooseDate": "Tarih Seç",
+        "form": {
+            "selectDate": "Tarih Seç",
+            "date": "Tarih",
+            "searchTitle": "Başlık Ara",
+            "title": "Başlık",
+            "selectType": "Tür Seç",
+            "type": "Tür",
+            "wDay": "Çalışma Günü",
+            "nwDay": "Çalışma Dışı Gün",
+            "addDescription": "Açıklama Ekle",
+            "description": "Açıklama",
+            "markDate": "Tarihi İşaretle"
+        },
+        "total": "Toplam",
+        "days": "Günler",
+        "page": "Sayfa",
+        "next": "Sonraki",
+        "sortedBy": "Sıralama"
+    },
+
+    "users": {
+        "users": "Kullanıcılar",
+        "addUser": "Kullanıcı Ekle",
+        "description": "Açıklama",
+        "role": "Rol",
+        "updated": "Güncellendi",
+        "form": {
+            "addUsername": "Kullanıcı Adı Ekle",
+            "username": "Kullanıcı Adı",
+            "addPassword": "Şifre Ekle",
+            "password": "Şifre",
+            "selectRole": "Rol Seç",
+            "role": "Rol",
+            "regulator": "Düzenleyici",
+            "administrator": "Yönetici",
+            "survey": "Anketi Tamamla",
+            "view": "Görünüm",
+            "edit": "Düzenle",
+            "suspensions": "Askıya Alma",
+            "report": "Rapor",
+            "routingErrors": "Yönlendirme Hataları",
+            "calendar": "Takvim",
+            "user": "Kullanıcı",
+            "operators": "Operatörler",
+            "help": "Yardım",
+            "portedHistory": "Taşınan Numara Geçmişi"
+        },
+        "total": "Toplam",
+        "days": "Günler",
+        "page": "Sayfa",
+        "next": "Sonraki",
+        "sortedBy": "Sıralama"
+    },
+
+    "operators": {
+        "operators": "Operatörler",
+        "addOperators": "Operatör Ekle",
+        "form": {
+            "addOperatorsName": "Operatör Adı Ekle",
+            "name": "Ad",
+            "addOperatorsCode": "Operatör Kodu Ekle",
+            "code": "Kod",
+            "addOperatorsX509": "x509 Ekle",
+            "cName": "Ortak Ad",
+            "addOperatorsKeystore": "AEK Anahtar Deposu Alias'ı Ekle",
+            "keystore": "AEK Anahtar Deposu Alias'ı",
+            "addOperatorsEndpoint": "WebServis Son Noktasını Ekle",
+            "endpoint": "WebServis Son Noktası",
+            "addOperatorsFixed": "Sabit Numara İçin Engelleme Günleri Ekle",
+            "fixed": "Sabit numaralar için engelleme günleri:",
+            "addOperatorsMobile": "Mobil Numara İçin Engelleme Günleri Ekle",
+            "mobile": "Mobil numaralar için engelleme günleri",
+            "description": "Açıklama"
+        },
+        "operatorName": "Operatör Adı",
+        "operatorCode": "Operatör Kodu",
+        "certificates": "Sertifikalar",
+        "assigned": "Atanan seriler",
+        "noSeries": "Seri atanmamış",
+        "totalSeries": "Toplam atanan seri"
+    },
+
+    "porteds": {
+        "checkStatus": "Taşınan numarayı ekle",
+        "sNumber": "Numara Ara",
+        "donor": "Bağışçı",
+        "recipient": "Alıcı",
+        "routingCode": "Yönlendirme Kodu",
+        "date": "Tarih",
+        "name": "Ad",
+        "comment": "Yorum",
+        "check": "Eklemek",
+        "status": "Durum", 
+        "number":"Sayılar",
+        "required":"gereklidir."
+    },
+
+    "portedsRequests": {
+        "pending": "BEKLEYEN",
+        "accept": "KABUL ET",
+        "reject": "REDDET",
+        "selectStatus": "Durum Seç",
+        "dateOfPorting": "Taşınma Tarihi",
+        "donorOperatorCode": "Bağışçı Operatör Kodu",
+        "recipientOperatorCode": "Alıcı Operatör Kodu",
+        "donorRoutingCode": "Bağışçı Yönlendirme Kodu",
+        "status": "Durum",
+        "acceptLower": "Kabul Et",
+        "rejectLower": "Reddet"
+    }
+}

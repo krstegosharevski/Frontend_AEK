@@ -1,0 +1,8 @@
+.bckg_index{
+    background-image: url( 'http://88.85.105.139/AEC-NumberPortability/images/background_index.jpg' );
+    background-size: cover; /* Покривање на целата позадина */
+    background-position: center; /* Центрирање на сликата */
+    background-repeat: no-repeat; /* Без повторување на сликата */
+    height: 100vh; /* Висина на телото да биде 100% од видливата област */
+    margin: 0; /* Отстранување на маргините на телото */
+}

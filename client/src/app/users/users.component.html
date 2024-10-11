@@ -1,0 +1,366 @@
+<div class="pb-4">
+    <div class="container pt-2" style="background-color: #f6f3f4">
+        <div class="row">
+            <div class="text-center">
+                <h1 class="fw-light">{{'users.users'|translate}}</h1>
+            </div>
+        </div>
+
+
+        <div class="container mt-2">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-auto mb-4" *ngIf="!showForm">
+                    <button class="btn  btn-lg custom-button-reverse" (click)="showForm = !showForm">
+                        {{'users.addUser'|translate}}
+                    </button>
+                </div>
+
+                <div *ngIf="showForm" class="col-auto my-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form action="" method="post">
+                                <h1> {{'users.addUser'|translate}} </h1>
+
+                                <fieldset>
+
+                                    <legend><span class="number">1</span> {{'users.form.addUsername'|translate}} </legend>
+
+                                    <label for="username">{{'users.form.username'|translate}}:</label>
+                                    <input id="username" type="text">
+
+
+                                    <legend><span class="number">2</span> {{'users.form.addPassword'|translate}} </legend>
+
+                                    <label for="password">{{'users.form.password'|translate}}:</label>
+                                    <input type="password" id="password" name="password">
+
+
+                                    <legend><span class="number">3</span> {{'users.form.selectRole'|translate}} </legend>
+
+                                    <label for="title">{{'users.form.role'|translate}} :</label>
+                                    <select>
+                                        <option>{{'users.form.regulator'|translate}}</option>
+                                        <option>{{'users.form.administrator'|translate}}</option>
+                                    </select>
+
+
+                                    <legend><span class="number">4</span> {{'users.form.survey'|translate}} </legend>
+                                    <table>
+                                        <tr>
+                                            <td>{{'users.form.role'|translate}}</td>
+                                            <td class="ps-4">{{'users.form.view'|translate}}</td>
+                                            <td class="ps-4">{{'users.form.edit'|translate}}</td>
+                                        </tr>
+                                        <tr class="pt-1">
+                                            <td>{{'users.form.suspensions'|translate}}</td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                        </tr>
+                                        <tr class="pt-1">
+                                            <td>{{'users.form.report'|translate}}</td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                            <td class="ps-4"></td>
+                                        </tr>
+                                        <tr class="pt-1">
+                                            <td>{{'users.form.routingErrors'|translate}}</td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                        </tr>
+                                        <tr class="pt-1">
+                                            <td>{{'users.form.calendar'|translate}}</td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                        </tr>
+                                        <tr class="pt-1">
+                                            <td>{{'users.form.user'|translate}}</td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                            <td class="ps-4"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{'users.form.operators'|translate}}</td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{'users.form.help'|translate}}</td>
+                                            <td class="ps-4"></td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{'users.form.portedHistory'|translate}}</td>
+                                            <td class="ps-4"><input type="checkbox"></td>
+                                            <td class="ps-4"></td>
+                                        </tr>
+                                    </table>
+
+                                    <label for="password">{{'users.description'|translate}}:</label>
+                                    <textarea rows="3"></textarea>
+
+                                </fieldset>
+
+                                <button (click)="showForm = false" type="submit">{{'users.addUser'|translate}}</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col pt-2 mx-2" style="  background-color: white">
+                        <div>
+                            <div class="form-inline">
+
+                                <label class="extra-small-text" for="datepicker">{{'from'|translate}}:</label>
+                                <input id="datepicker" type="text" class="form-control" bsDatepicker
+                                    style="width: 120px; height: 30px;">
+                                <img for="datepicker" class="ms-1"
+                                    src="http://88.85.105.139/AEC-NumberPortability/struts/dojo/src/widget/templates/images/dateIcon.gif">
+
+                                <label class="extra-small-text" for="datepicker">{{'to'|translate}}:</label>
+                                <input id="datepicker" type="text" class="form-control" bsDatepicker
+                                    style="width: 120px; height: 30px;">
+                                <img for="datepicker" class="ms-1"
+                                    src="http://88.85.105.139/AEC-NumberPortability/struts/dojo/src/widget/templates/images/dateIcon.gif">
+
+                                <label class="extra-small-text ps-3" for="datepicker">{{'users.sortedBy'|translate}}:</label>
+                                <select class="extra-small-text">
+                                    <option>Title</option>
+                                    <option>Type</option>
+                                    <option>Date</option>
+                                </select>
+
+                                <input class="btn btn-sm ms-3 custom-button-reverse fw-light-bold" type="button" value="Filter">
+                            </div>
+
+                            <div>
+                                <table class="table table-striped extra-extra-small-text">
+                                    <thead class="blue-thead">
+                                        <tr>
+                                            <th scope="col"></th>
+                                            <th scope="col">{{'users.users'|translate}}</th>
+                                            <th scope="col">{{'users.description'|translate}}</th>
+                                            <th scope="col">{{'users.role'|translate}}</th>
+                                            <th scope="col">{{'users.updated'|translate}}</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">seavus</th>
+                                            <td>Seavus user</td>
+                                            <td>Administrator</td>
+                                            <td>15/08/2008 18:31</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">admin</th>
+                                            <td>Test admin</td>
+                                            <td>Administrator</td>
+                                            <td>03/09/2008 13:48</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">telcom</th>
+                                            <td>Administratorski user za Sektorot za telekomunikacii</td>
+                                            <td>09/09/2008 11:08</td>
+                                            <td>Administrator</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">IgorK</th>
+                                            <td>Сектор за телекомуникации - Игор Кралевски</td>
+                                            <td>Administrator</td>
+                                            <td>11/09/2008 11:24</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">valentin</th>
+                                            <td>Валентин Ѓуровски</td>
+                                            <td>Regulator</td>
+                                            <td>28/10/2011 15:45</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">valentin</th>
+                                            <td>Валентин Ѓуровски</td>
+                                            <td>Regulator</td>
+                                            <td>28/10/2011 15:45</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">valentin</th>
+                                            <td>Валентин Ѓуровски</td>
+                                            <td>Regulator</td>
+                                            <td>28/10/2011 15:45</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">valentin</th>
+                                            <td>Валентин Ѓуровски</td>
+                                            <td>Regulator</td>
+                                            <td>28/10/2011 15:45</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">valentin</th>
+                                            <td>Валентин Ѓуровски</td>
+                                            <td>Regulator</td>
+                                            <td>28/10/2011 15:45</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">valentin</th>
+                                            <td>Валентин Ѓуровски</td>
+                                            <td>Regulator</td>
+                                            <td>28/10/2011 15:45</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">seavus</th>
+                                            <td>Seavus user</td>
+                                            <td>Administrator</td>
+                                            <td>15/08/2008 18:31</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">seavus</th>
+                                            <td>Seavus user</td>
+                                            <td>Administrator</td>
+                                            <td>15/08/2008 18:31</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                        <tr>
+                                            <td><input type="checkbox" name="ids"></td>
+                                            <th scope="row">seavus</th>
+                                            <td>Seavus user</td>
+                                            <td>Administrator</td>
+                                            <td>15/08/2008 18:31</td>
+                                            <td class="d-flex justify-content-end">
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/edit.gif"></a>
+                                                <a href="#"><img
+                                                        src="http://88.85.105.139/AEC-NumberPortability/images/delete.gif"
+                                                        alt=""></a>
+                                            </td>
+                                    </tbody>
+                                </table>
+
+                                <div class="container pb-2" style="background-color: #d83656;">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <input class="btn btn-sm ms-3 custom-button-reverse mt-2" type="button"
+                                                value="Remove">
+                                        </div>
+                                        <div class="col d-flex justify-content-end align-items-center">
+                                            <span class="extra-small-text">
+                                                {{'users.total'|translate}}: <b>184</b> {{'users.days'|translate}}
+                                            </span>
+                                            <span class="extra-small-text ps-3">
+                                                {{'users.page'|translate}}: <b>1/12</b> <a href="#" style="text-decoration: none;"> {{'users.next'|translate}}</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end align-items-center">
+                    <span class="extra-small-text">
+                        <img src="http://88.85.105.139/AEC-NumberPortability/images/help-icon.jpg"> Help
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+

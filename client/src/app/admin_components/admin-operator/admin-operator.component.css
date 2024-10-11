@@ -1,0 +1,50 @@
+.extra-small-text{
+  font-size: 0.75rem;
+}
+.blue-thead th {
+  background-color: #d83656 !important;
+  color: white !important; 
+}
+.form-inline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space between rows */
+}
+.form-inline label {
+  margin-right: 10px; /* Space between label and input */
+}
+.form-control {
+  width: 200px; /* Adjust width as needed */
+}
+
+table thead .thead-blue tr{
+  background-color: #d83656 !important;
+}
+
+.extra-extra-small-text{
+  font-size: 0.65rem;
+}
+
+.custom-button{
+  border: 2px solid black;  color: black; background-color: #d83656;
+  width: 100px;
+  padding-top: 6px;
+}
+
+.custom-button:hover {
+  background-color:  #556B2F; /* Darker shade on hover */
+  color: white; /* Change text color on hover */
+}
+
+.style-buttons{
+    background-color: rgba(152,143,122,255);
+    color: white;
+}
+
+.custom-text{
+  color: white;
+}
+
+.style-buttons-shadow {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /* Пример за сенка */
+}

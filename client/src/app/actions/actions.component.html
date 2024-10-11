@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col my-4">
+            <div class="info-panel p-4">
+                <h3 class="fw-light text-center py-2">{{'actions.information'|translate}}</h3>
+
+                <div class="container mt-3">
+                    <div class="row mb-3">
+                        <div class="col">
+                            <h5 class="fw-light">{{'actions.headers.newService' | translate}}</h5>
+                            <p>{{'actions.content.newService' | translate}}</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <h5 class="fw-light">{{'actions.headers.partnershipsCollaborations' | translate}}</h5>
+                            <p>{{'actions.content.partnershipsCollaborations' | translate}}</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <h5 class="fw-light">{{'actions.headers.awards' | translate}}</h5>
+                            <p>{{'actions.content.awards' | translate}}</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <h5 class="fw-light">{{'actions.headers.responsibility' | translate}}</h5>
+                            <p>{{'actions.content.responsibility' | translate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mt-4">
+            <div class="container">
+                <div class="row info-panel">
+                    <h4 class="fw-light text-center pt-3">{{'actions.searchNumber'|translate}}</h4>
+                    <form (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="ns">NS:</label>
+                            <input type="text" id="ns" [(ngModel)]="ns" name="ns" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ndc">NDC:</label>
+                            <input type="text" id="ndc" [(ngModel)]="ndc" name="ndc" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn custom-button-reverse m-3">{{'search'|translate}}</button>
+                    </form>
+                </div>
+                <br><br>
+
+                <div *ngIf="data" class="my-4 p-3 info-panel">
+                    <h3 class="fw-light">Response Data:</h3>
+                    <div>
+                        <p><strong>Tip:</strong> {{ data.tip }}</p>
+                        <p><strong>Assigned Series Start:</strong> {{ data.assignedSeriesStart }}</p>
+                        <p><strong>Assigned Series End:</strong> {{ data.assignedSeriesEnd }}</p>
+                        <p><strong>Last Change:</strong> {{ data.lastChange }}</p>
+                        <p><strong>National Destination Code:</strong> {{ data.nationalDestinationCode }}</p>
+                        <p><strong>Type:</strong> {{ data.type }}</p>
+                        <p><strong>Routing Code Entity ID:</strong> {{ data.routingCode_entityid }}</p>
+                        <p><strong>Date of Assignment:</strong> {{ data.dateOfAssignment }}</p>
+                        <h4 class="fw-light">Operators:</h4>
+                        <ul>
+                            <li *ngFor="let operator of data.operator">
+                                <p><strong>Operator Name:</strong> {{ operator.name }}</p>
+                                <p><strong>Operator Code:</strong> {{ operator.code }}</p>
+                                <h5 class="fw-light">Assigned Series:</h5>
+                                <ul>
+                                    <li *ngFor="let series of operator.operator_assignedseries">
+                                        <p>Operator Entity ID: {{ series.Operator_entityid }}</p>
+                                        <p>Assigned Series Entity ID: {{ series.assignedSeries_entityid }}</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

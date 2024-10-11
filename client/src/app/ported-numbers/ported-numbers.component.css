@@ -1,0 +1,58 @@
+p {
+    font-weight: 300; /* Light font weight */
+    /* Add any other styles from the fw-light class */
+    font-size: 1rem; /* Example: font size */
+    color: #333; /* Example: font color */
+  }
+
+  .info-panel {
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ddd; /* Border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.info-panel h3 {
+    font-size: 1.5rem; /* Slightly larger title */
+    color: #d83656; /* Custom color for title */
+}
+
+.info-panel h5 {
+    color: #333; /* Darker color for subtitles */
+}
+
+.info-panel p {
+    color: #666; /* Gray color for text */
+}
+
+
+.custom-button{
+    border: 2px solid black;  color: black; background-color: #40fe98;
+    
+  }
+  
+  .custom-button:hover {
+    background-color: #d83656; /* Darker shade on hover */
+    color: white; /* Change text color on hover */
+  }
+
+  .custom-button-reverse {
+    border: 2px solid black;
+    color: #fff;
+    background-color: black
+  }
+  
+  .custom-button-reverse:hover {
+    background-color: #80f3b6;
+    /* Darker shade on hover */
+    color: white;
+    /* Change text color on hover */
+  }
+
+  .valid-status {
+    color: green;
+  }
+  
+  .invalid-status {
+    color: red;
+  }
